@@ -1,0 +1,155 @@
+:root {
+    --background-color: #E4C59E;
+    --text-color: #805d43;
+    --typewriter-color: #186F65;
+}
+* {
+    font-family: 'Gelasio', sans-serif;
+    background: var(--background-color) ;
+    color: var(--text-color);
+}
+
+body {
+    min-height: 100vh;
+}
+
+#container3D canvas {
+    width: 100vw !important;
+    height: 100vh !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+section.topbarHeader, ul.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: 1rem;
+    padding: 1rem;
+    position: sticky;
+}
+
+.topbarHeader {
+    display: flex;
+    padding: 15px 0;
+}
+
+img {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px;
+    margin: auto;
+    border-radius: 100%;
+    max-width: 500px;
+    filter: blur(2%);
+}
+
+ul.navbar {
+    list-style-type: none;
+    position: sticky;
+    padding: 15px;
+
+}
+a {
+    color: var(--text-color);
+    text-transform: uppercase;text-decoration: none;
+    letter-spacing: 0.15em;
+    display: flex;
+    padding: 15px 20px;
+    position: relative;
+}
+
+a:hover {
+    width: 100%;
+    left: 0;
+    color: var(--typewriter-color);
+    transform: scale(1.1);
+}
+
+section.textName {
+    display: flex;
+    padding: 20px 20px 20px 20px;
+    margin-left: 10%;
+}
+
+
+section.hero {
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.textContainer {
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/*About me text animation and display*/
+
+.textContainer .text {
+    position: relative;
+    color: var(--typewriter-color);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.textContainer .text.firstText {
+    color: var(--text-color);
+}
+
+.text.secText:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--background-color);
+    border-left: 2px solid var(--text-color);
+    animation: animate 5s steps(16) infinite;
+}
+
+/*typewriter animation (uncomment to display affet) */
+@keyframes animate {
+    40%, 60% {
+        left:100%;
+    }
+    100% {
+        left: 0%;
+    }
+} 
+
+div.aboutMe {
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+p.aboutmeText{
+    font-size: 22px;
+    font-weight: 800;
+    padding: 5rem 5rem 5rem 5rem;
+    margin: 2rem;
+    max-width: 50vw;
+    max-height: 100vh;
+}
+
+ul.skillContainer {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+img.skillIcons {
+    display: inherit;
+    max-width: 35px;
+    padding: 5px;
+}

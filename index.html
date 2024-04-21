@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ryan King Portfolio</title>
+</head>
+<body>
+    <header>
+        <div id="container3D">
+
+        </div>
+    </header>
+    <section class="topbarHeader">
+        <nav>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><i class="fa-solid fa-bars"></i></li>
+            </ul>
+        </nav>
+    </section class="imgContainer">
+        <img src="./Assets/images/portfolio image.jpg" alt="headshot image of myself">
+    </section>
+    <section class="hero">
+        
+        <span class="textContainer">
+            <span class="text firstText"> Hi. I'm Ryan and I'm a </span>
+            <span class="text secText">Creative.</span>
+        </span>
+        <script>
+            const text = document.querySelector(".secText");
+
+            const textLoad = () => {
+                setTimeout(() => {
+                    text.textContent = "Creative.";
+                }, 10000);
+                setTimeout(() => {
+                    text.textContent = "Web Developer.";
+                }, 5000);
+                setTimeout(() => {
+                    text.textContent = "Freelancer.";
+                }, 10000);
+            }
+
+            textLoad();
+            setInterval(textLoad, 10000);
+        </script>    
+    </section>
+        <div class="aboutMe">
+            <p class="aboutmeText">
+                I am a developer based in Atlanta, GA specializing in building and designing responsive sites for local businesses. I enjoy recreating games from my childhood and diving deep into new cultures and ways of living to appreciate everything that I have.
+            </p>
+        </div>
+    <script type="module" src="Javascript/main.js"></script>
+    <section class="skills">
+        <div class="skillHeader">
+            <h2>
+                Skills & Competency
+            </h2>
+                <ul class="skillContainer">
+                    <li><img src="./Assets/icons/html icon.svg" class="skillIcons"></li>
+                    <li><img src="./Assets/icons/css icon.svg" class="skillIcons"></li>
+                    <li><img src="./Assets/icons/js icon.svg" class="skillIcons"></li>
+                    <li><img src="./Assets/icons/node icon.svg" class="skillIcons"></li>
+                    <li><img src="./Assets/icons/react.svg" 
+                    class="skillIcons"></li>
+                    <li><img src="./Assets/icons/jira icon.svg" 
+                        class="skillIcons"></li>
+                </ul>
+        </div>
+    </section>
+</body>
+</html>
